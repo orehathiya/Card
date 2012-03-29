@@ -1,0 +1,26 @@
+{% extends "meishi/base.html" %}
+{% block content %}
+<h1>{{ meishi.first_name }} の名刺</h1>
+<dl>
+    <dt>名前</dt>
+        <dd>{{ meishi.last_name }} {{ meishi.first_name }}</dd>
+    <dt>ふりがな</dt>
+    <dd>{{ meishi.kana_last_name }} {{meishi.kana_first_name }}</dd>
+    <dt>ローマ字</dt>
+        <dd>{{ meishi.roma_last_name }} {{ meishi.roma_first_name }}</dd>
+    <dt>所属</dt>
+        <dd>{{ meishi.belong }}</dd>
+    <dt>役職</dt>
+    <dd>{{ meishi.post }}</dd>
+    <dt>電話番号</dt>
+    <dd>{{ meishi.call_number }}</dd>
+    <dt>FAX</dt>
+    <dd>{{ meishi.fax_number }}</dd>
+    <dt>メールアドレス</dt>
+    <dd>{{ meishi.email }}</dd>
+    <dt>URL</dt>
+    <dd>{{ meishi.url }}</dd>
+    <dt>画像</dt>
+    <dd><img src={{ meishi.image.url }} /></dd>
+</dl>
+{% endblock %}

@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <ul>
+            {% if perms.meishi.add_company %}
+            <li><a href={% url meishi.views.list_user %}>アカウント管理</a></li>
+            <li><a href={% url meishi.views.company_information %}>会社情報</a></li>
+            {% endif %}
+            <li><a href={% url meishi.views.exchange %}>名刺交換</a></li>
+            <li><a href={% url meishi.views.index %}>保持名刺一覧</a></li>
+            <li><a href={% url meishi.views.exchange_history %}>名刺交換履歴</a></li>
+            <li><a href={% url meishi.views.my_meishi %}>自分の名刺</a></li>
+        </ul>
+        {% block content %}{% endblock %}
+        <a href={% url meishi.views.logout_view %}>logout</a>
+    </body>
+</html>

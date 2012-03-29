@@ -1,0 +1,24 @@
+{% extends "meishi/base.html" %}
+{% block content %}
+<h1>{{ company.name }} の会社情報</h1>
+<dl>
+    <dt>名前</dt>
+        <dd>{{ company.name }}</dd>
+    <dt>契約人数</dt>
+        <dd>{{ company.contract_count }}</dd>
+    <dt>契約期間</dt>
+        <dd>{{ company.contract_term }}</dd>
+    <dt>住所</dt>
+        <dd>{{ company.address }}</dd>
+    <dt>電話番号</dt>
+        <dd>{{ company.call_number }}</dd>
+    <dt>FAX</dt>
+        <dd>{{ company.fax_number }}</dd>
+    <dt>メールアドレス</dt>
+        <dd>{{ company.email }}</dd>
+    <dt>URL</dt>
+        <dd>{{ company.url }}</dd>
+    <dt>画像</dt>
+        <dd>{{ company.message }}</dd>
+</dl>
+{% endblock %}

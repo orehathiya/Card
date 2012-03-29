@@ -1,0 +1,21 @@
+{% extends "meishi/base.html" %}
+{% block content %}
+<h1>{{ user }}の保持名刺一覧</h1>
+<a href={% url meishi.views.meishi_add %}>名刺追加</a>
+<table>
+    <tr>
+        <th>会社名</th>
+        <th>名前</th>
+        <th>所属</th>
+        <th>役職</th>
+    </tr>
+{% for meishi in user.meishi_set.all %}
+    <tr>
+        <td>{{ meishi.company }}</td>
+        <td><a href={% url meishi.views.meishi_detail meishi_id=meishi.id %}>{{ meishi.first_name }}</a></td>
+        <td>{{ meishi.belong }}</td>
+        <td>{{ meishi.post }}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}

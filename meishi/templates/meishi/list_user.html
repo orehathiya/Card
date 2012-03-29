@@ -1,0 +1,6 @@
+<h1>{{ company.name }}のアカウント一覧</h1>
+<ul>
+{% for user in user_list %}
+    <li><a href="/meishi/">{{ user.username }}</a></li>
+{% endfor %}
+</ul>

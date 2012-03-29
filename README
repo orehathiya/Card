@@ -1,0 +1,12 @@
+まず以下のコマンドでデータベースを作成
+python manage.py syncdb
+途中アドミンサイトのユーザ名とE-mailアドレス、パスワードを設定
+
+python manage.py runserver
+で開発用サーバ起動
+
+アドミンサイトURL:
+http://127.0.0.1:8000/admin/
+
+アプリケーションURL:
+http://127.0.0.1:8000/meishi/
